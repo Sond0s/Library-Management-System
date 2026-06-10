@@ -1,0 +1,20 @@
+using BLL;
+
+namespace LibraryManagmentSystem
+{
+    internal static class Program
+    {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            UsersBLL user = new UsersBLL("Sondos", "1234");
+            Application.Run(new frmDashboard(user));
+        }
+    }
+}

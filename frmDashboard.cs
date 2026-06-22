@@ -22,14 +22,14 @@ namespace LibraryManagmentSystem
             //there is no need each time to define new UserBLL Object , just one for entire login process.
             InitializeComponent();
             _CurrentUser = CurrentUser;
-            lblUsername.Text = $"Welcome! {CurrentUser.Username}";
+            lblUsername.Text = $"Hello, {CurrentUser.Username}";
 
         }
 
         private void ChangeMouseEnter(Label label)
         {
             label.Cursor = Cursors.Hand;
-            label.ForeColor = Color.Blue;
+            label.ForeColor = ThemeColor.BackColor;
         }
 
         private void ChangeMouseLeave(Label label)
@@ -43,7 +43,6 @@ namespace LibraryManagmentSystem
         {
             Form frm = new frmMembers();
             frm.ShowDialog();
-            this.Hide();
 
         }
 
@@ -51,7 +50,6 @@ namespace LibraryManagmentSystem
         {
             Form frm = new frmBooks();
             frm.ShowDialog();
-            this.Hide();
         }
 
         private void lblMembers_MouseEnter(object sender, EventArgs e)
@@ -66,9 +64,25 @@ namespace LibraryManagmentSystem
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt = BooksBLL.GetAllBooks();
-            dgvDashboardBooks.DataSource = dt;
+            //Load all the data of the views.
+            LoadDataGridLists();
+
+            //ColorTranslator.FromHtml("#A536D1")
+            this.BackColor = ThemeColor.BackColor;
+            btnLogout.FillColor = ThemeColor.btnColor;
+            //Get today's date.
+            string Date = DateTime.Now.ToString();
+            lblTodayTime.Text = Date;
+        }
+
+        private void LoadDataGridLists()
+        {
+            DataTable dt1 = new DataTable();
+            DataTable dt2 = new DataTable();
+            dt1 = BooksBLL.GetAllBooks();
+            dt2 = MembersBLL.ListAllMembers();
+            dgvDashboardBooks.DataSource = dt1;
+            dgvDashboardMembers.DataSource = dt2;
         }
 
         private void lblBooks_MouseEnter(object sender, EventArgs e)
@@ -81,7 +95,24 @@ namespace LibraryManagmentSystem
             ChangeMouseLeave(lblBooks);
         }
 
-    
+        private void lblBorrowings_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeMouseEnter(lblBorrowings);
+        }
 
+        private void lblBorrowings_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeMouseLeave(lblBorrowings);
+        }
+
+        private void lblFines_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeMouseEnter(lblFines);
+        }
+
+        private void lblFines_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeMouseLeave(lblFines);
+        }
     }
 }

@@ -3,22 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmaddnewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmaddnewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DE936CC-4BDA-4597-BA66-40DD8F9AA2D8}|..\\BLL\\BLL.csproj|c:\\users\\user\\source\\repos\\windowsforms\\bll\\booksbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmaddnewbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmaddnewbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{239DC1FA-2532-4F69-A5D3-AB41FD0E12E6}|..\\DAL\\DAL.csproj|c:\\users\\user\\source\\repos\\windowsforms\\dal\\booksdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{239DC1FA-2532-4F69-A5D3-AB41FD0E12E6}|..\\DAL\\DAL.csproj|c:\\users\\user\\source\\repos\\windowsforms\\dal\\membersdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5DE936CC-4BDA-4597-BA66-40DD8F9AA2D8}|..\\BLL\\BLL.csproj|c:\\users\\user\\source\\repos\\windowsforms\\bll\\membersbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmaddnewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmaddnewmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,66 +35,93 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmBooks.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmBooks.cs",
-              "RelativeDocumentMoniker": "frmBooks.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmBooks.cs*",
-              "RelativeToolTip": "frmBooks.cs*",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T00:16:21.584Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmDashboard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "frmDashboard.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmDashboard.cs [Design]",
-              "RelativeToolTip": "frmDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T23:36:11.133Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BooksBLL.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\BLL\\BooksBLL.cs",
-              "RelativeDocumentMoniker": "..\\BLL\\BooksBLL.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\BLL\\BooksBLL.cs",
-              "RelativeToolTip": "..\\BLL\\BooksBLL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
+              "Title": "frmAddNewBook.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmAddNewBook.cs",
+              "RelativeDocumentMoniker": "frmAddNewBook.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmAddNewBook.cs",
+              "RelativeToolTip": "frmAddNewBook.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T21:57:24.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BooksDAL.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\DAL\\BooksDAL.cs",
-              "RelativeDocumentMoniker": "..\\DAL\\BooksDAL.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\DAL\\BooksDAL.cs",
-              "RelativeToolTip": "..\\DAL\\BooksDAL.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAACkAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T21:54:38.82Z",
+              "WhenOpened": "2026-06-22T20:43:21.755Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmBooks.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmBooks.cs",
-              "RelativeDocumentMoniker": "frmBooks.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmBooks.cs [Design]*",
-              "RelativeToolTip": "frmBooks.cs [Design]*",
+              "Title": "frmMembers.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmMembers.cs",
+              "RelativeDocumentMoniker": "frmMembers.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmMembers.cs",
+              "RelativeToolTip": "frmMembers.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAEoAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T21:27:31.883Z",
+              "WhenOpened": "2026-06-22T20:35:31.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmAddNewMember.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmAddNewMember.cs",
+              "RelativeDocumentMoniker": "frmAddNewMember.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmAddNewMember.cs [Design]",
+              "RelativeToolTip": "frmAddNewMember.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T20:12:55.373Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MembersDAL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\DAL\\MembersDAL.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\MembersDAL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\DAL\\MembersDAL.cs",
+              "RelativeToolTip": "..\\DAL\\MembersDAL.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAANIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T16:25:59.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MembersBLL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\BLL\\MembersBLL.cs",
+              "RelativeDocumentMoniker": "..\\BLL\\MembersBLL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\BLL\\MembersBLL.cs",
+              "RelativeToolTip": "..\\BLL\\MembersBLL.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T16:25:53.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAddNewMember.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmAddNewMember.cs",
+              "RelativeDocumentMoniker": "frmAddNewMember.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmAddNewMember.cs",
+              "RelativeToolTip": "frmAddNewMember.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAFMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T16:16:44.026Z",
+              "EditorCaption": ""
             }
           ]
         }

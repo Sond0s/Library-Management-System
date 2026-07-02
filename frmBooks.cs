@@ -20,11 +20,11 @@ namespace LibraryManagmentSystem
 
         private void frmBooks_Load(object sender, EventArgs e)
         {
-            RefreshBooksList();
-            ChangeColors();
+            _RefreshBooksList();
+            _ChangeColors();
         }
 
-        private void RefreshBooksList()
+        private void _RefreshBooksList()
         {
             DataTable dt = new DataTable();
             dt = BooksBLL.GetAllBooks();
@@ -32,7 +32,7 @@ namespace LibraryManagmentSystem
 
         }
 
-        private void ChangeColors()
+        private void _ChangeColors()
         {
             this.BackColor = ThemeColor.BackColor;
             btnAddBook.FillColor = ThemeColor.btnColor;
@@ -48,8 +48,15 @@ namespace LibraryManagmentSystem
         //as the text being changed in the bar, as the grid view show new data as needed.
         private void tbSearchBar_TextChanged(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(tbSearchBar.Text))
+            {
+                _RefreshBooksList();
+                return;
+            }
             //Binding result data set into the data grid view.
             dgvBooks.DataSource = BooksBLL.ListBooksByTitle(tbSearchBar.Text);
+
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,7 +70,7 @@ namespace LibraryManagmentSystem
                 if (BooksBLL.DeleteBook(BookID))
                 {
                     MessageBox.Show("Book Deleted Successfully.", "Succeded");
-                    RefreshBooksList();
+                    _RefreshBooksList();
                 }
                 else
                 {
@@ -76,7 +83,7 @@ namespace LibraryManagmentSystem
         {
             //update / edit the current row book info.
             //pass the ID to the add form.
-            int BookID = (int)dgvBooks.CurrentRow.Cells["BookID"].Value;
+            int BookID = (int)dgvBooks.CurrentRow.Cells["BookCopyID"].Value;
 
             Form frm = new frmAddNewBook(BookID);
             frm.ShowDialog();   

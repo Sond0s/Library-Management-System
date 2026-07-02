@@ -28,16 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblUsername = new Label();
             label3 = new Label();
             lblBooks = new Label();
@@ -45,6 +51,14 @@
             lblBorrowings = new Label();
             lblFines = new Label();
             MainPanel = new Guna.UI2.WinForms.Guna2Panel();
+            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            lblMembersCount = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            pictureBox6 = new PictureBox();
+            label5 = new Label();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            lblBooksCount = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            pictureBox5 = new PictureBox();
+            label4 = new Label();
             panel2 = new Panel();
             label2 = new Label();
             dgvDashboardMembers = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -57,8 +71,12 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            panel3 = new Panel();
+            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             MainPanel.SuspendLayout();
+            guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDashboardMembers).BeginInit();
             panel1.SuspendLayout();
@@ -67,7 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel3.SuspendLayout();
+            guna2Panel3.SuspendLayout();
             SuspendLayout();
             // 
             // lblUsername
@@ -96,7 +114,7 @@
             lblBooks.AutoSize = true;
             lblBooks.Cursor = Cursors.Hand;
             lblBooks.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBooks.Location = new Point(63, 62);
+            lblBooks.Location = new Point(81, 89);
             lblBooks.Name = "lblBooks";
             lblBooks.Size = new Size(114, 39);
             lblBooks.TabIndex = 3;
@@ -109,7 +127,7 @@
             // 
             lblMembers.AutoSize = true;
             lblMembers.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMembers.Location = new Point(63, 162);
+            lblMembers.Location = new Point(81, 188);
             lblMembers.Name = "lblMembers";
             lblMembers.Size = new Size(165, 39);
             lblMembers.TabIndex = 4;
@@ -122,11 +140,12 @@
             // 
             lblBorrowings.AutoSize = true;
             lblBorrowings.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBorrowings.Location = new Point(62, 271);
+            lblBorrowings.Location = new Point(81, 294);
             lblBorrowings.Name = "lblBorrowings";
             lblBorrowings.Size = new Size(201, 39);
             lblBorrowings.TabIndex = 5;
             lblBorrowings.Text = "Borrowings";
+            lblBorrowings.Click += lblBorrowings_Click;
             lblBorrowings.MouseEnter += lblBorrowings_MouseEnter;
             lblBorrowings.MouseLeave += lblBorrowings_MouseLeave;
             // 
@@ -134,28 +153,124 @@
             // 
             lblFines.AutoSize = true;
             lblFines.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFines.Location = new Point(65, 382);
+            lblFines.Location = new Point(83, 398);
             lblFines.Name = "lblFines";
             lblFines.Size = new Size(101, 39);
             lblFines.TabIndex = 6;
             lblFines.Text = "Fines";
+            lblFines.Click += lblFines_Click;
             lblFines.MouseEnter += lblFines_MouseEnter;
             lblFines.MouseLeave += lblFines_MouseLeave;
             // 
             // MainPanel
             // 
-            MainPanel.BackColor = SystemColors.ButtonFace;
+            MainPanel.BackColor = Color.Transparent;
+            MainPanel.BorderRadius = 15;
+            MainPanel.Controls.Add(guna2Panel2);
+            MainPanel.Controls.Add(guna2Panel1);
             MainPanel.Controls.Add(panel2);
             MainPanel.Controls.Add(panel1);
             MainPanel.Controls.Add(lblTodayTime);
             MainPanel.Controls.Add(lblUsername);
-            MainPanel.CustomizableEdges = customizableEdges1;
+            MainPanel.CustomizableEdges = customizableEdges5;
+            MainPanel.FillColor = SystemColors.ButtonFace;
             MainPanel.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MainPanel.Location = new Point(323, 12);
             MainPanel.Name = "MainPanel";
-            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            MainPanel.Size = new Size(1198, 714);
+            MainPanel.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            MainPanel.Size = new Size(1198, 725);
             MainPanel.TabIndex = 8;
+            // 
+            // guna2Panel2
+            // 
+            guna2Panel2.AutoRoundedCorners = true;
+            guna2Panel2.BackColor = Color.Transparent;
+            guna2Panel2.BorderRadius = 45;
+            guna2Panel2.BorderThickness = 1;
+            guna2Panel2.Controls.Add(lblMembersCount);
+            guna2Panel2.Controls.Add(pictureBox6);
+            guna2Panel2.Controls.Add(label5);
+            guna2Panel2.CustomBorderColor = Color.Transparent;
+            guna2Panel2.CustomizableEdges = customizableEdges1;
+            guna2Panel2.FillColor = SystemColors.ButtonHighlight;
+            guna2Panel2.Location = new Point(628, 128);
+            guna2Panel2.Name = "guna2Panel2";
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel2.Size = new Size(247, 93);
+            guna2Panel2.TabIndex = 11;
+            // 
+            // lblMembersCount
+            // 
+            lblMembersCount.BackColor = Color.Transparent;
+            lblMembersCount.Font = new Font("Cairo ExtraBold", 16.2F, FontStyle.Bold);
+            lblMembersCount.Location = new Point(86, 3);
+            lblMembersCount.Name = "lblMembersCount";
+            lblMembersCount.Size = new Size(14, 52);
+            lblMembersCount.TabIndex = 10;
+            lblMembersCount.Text = "-";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.icons8_people;
+            pictureBox6.Location = new Point(172, 26);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(51, 49);
+            pictureBox6.TabIndex = 10;
+            pictureBox6.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Cairo", 12F, FontStyle.Bold);
+            label5.Location = new Point(22, 49);
+            label5.Name = "label5";
+            label5.Size = new Size(145, 37);
+            label5.TabIndex = 8;
+            label5.Text = "Total Members";
+            // 
+            // guna2Panel1
+            // 
+            guna2Panel1.BackColor = Color.Transparent;
+            guna2Panel1.BorderRadius = 45;
+            guna2Panel1.Controls.Add(lblBooksCount);
+            guna2Panel1.Controls.Add(pictureBox5);
+            guna2Panel1.Controls.Add(label4);
+            guna2Panel1.CustomizableEdges = customizableEdges3;
+            guna2Panel1.FillColor = SystemColors.ButtonHighlight;
+            guna2Panel1.Location = new Point(35, 128);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel1.Size = new Size(250, 96);
+            guna2Panel1.TabIndex = 10;
+            // 
+            // lblBooksCount
+            // 
+            lblBooksCount.BackColor = Color.Transparent;
+            lblBooksCount.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBooksCount.Location = new Point(69, 13);
+            lblBooksCount.Name = "lblBooksCount";
+            lblBooksCount.Size = new Size(12, 45);
+            lblBooksCount.TabIndex = 9;
+            lblBooksCount.Text = "-";
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.icons8_book2;
+            pictureBox5.Location = new Point(164, 35);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(149, 119);
+            pictureBox5.TabIndex = 8;
+            pictureBox5.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Cairo", 12F, FontStyle.Bold);
+            label4.Location = new Point(21, 49);
+            label4.Name = "label4";
+            label4.Size = new Size(117, 37);
+            label4.TabIndex = 7;
+            label4.Text = "Total Books";
             // 
             // panel2
             // 
@@ -163,14 +278,14 @@
             panel2.Controls.Add(dgvDashboardMembers);
             panel2.Location = new Point(602, 227);
             panel2.Name = "panel2";
-            panel2.Size = new Size(582, 471);
+            panel2.Size = new Size(582, 484);
             panel2.TabIndex = 7;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Cairo", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(26, 20);
+            label2.Location = new Point(3, 37);
             label2.Name = "label2";
             label2.Size = new Size(200, 56);
             label2.TabIndex = 6;
@@ -185,7 +300,7 @@
             dgvDashboardMembers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.MediumOrchid;
-            dataGridViewCellStyle2.Font = new Font("Cairo", 10.5F);
+            dataGridViewCellStyle2.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = Color.DarkMagenta;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -195,26 +310,26 @@
             dgvDashboardMembers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Cairo", 10.5F);
+            dataGridViewCellStyle3.Font = new Font("Cairo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDashboardMembers.DefaultCellStyle = dataGridViewCellStyle3;
             dgvDashboardMembers.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDashboardMembers.Location = new Point(26, 96);
+            dgvDashboardMembers.Location = new Point(3, 96);
             dgvDashboardMembers.Name = "dgvDashboardMembers";
             dgvDashboardMembers.ReadOnly = true;
             dgvDashboardMembers.RowHeadersVisible = false;
             dgvDashboardMembers.RowHeadersWidth = 51;
-            dgvDashboardMembers.Size = new Size(537, 361);
+            dgvDashboardMembers.Size = new Size(576, 385);
             dgvDashboardMembers.TabIndex = 4;
             dgvDashboardMembers.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvDashboardMembers.ThemeStyle.HeaderStyle.BackColor = Color.MediumOrchid;
-            dgvDashboardMembers.ThemeStyle.HeaderStyle.Font = new Font("Cairo", 10.5F);
+            dgvDashboardMembers.ThemeStyle.HeaderStyle.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvDashboardMembers.ThemeStyle.HeaderStyle.Height = 30;
             dgvDashboardMembers.ThemeStyle.ReadOnly = true;
-            dgvDashboardMembers.ThemeStyle.RowsStyle.Font = new Font("Cairo", 10.5F);
+            dgvDashboardMembers.ThemeStyle.RowsStyle.Font = new Font("Cairo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvDashboardMembers.ThemeStyle.RowsStyle.Height = 29;
             // 
             // panel1
@@ -223,14 +338,14 @@
             panel1.Controls.Add(dgvDashboardBooks);
             panel1.Location = new Point(10, 227);
             panel1.Name = "panel1";
-            panel1.Size = new Size(582, 471);
+            panel1.Size = new Size(582, 481);
             panel1.TabIndex = 5;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Cairo", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(25, 20);
+            label1.Location = new Point(3, 37);
             label1.Name = "label1";
             label1.Size = new Size(156, 56);
             label1.TabIndex = 6;
@@ -245,7 +360,7 @@
             dgvDashboardBooks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.MediumOrchid;
-            dataGridViewCellStyle5.Font = new Font("Cairo", 9F);
+            dataGridViewCellStyle5.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle5.ForeColor = Color.White;
             dataGridViewCellStyle5.SelectionBackColor = Color.DarkMagenta;
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
@@ -262,16 +377,16 @@
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dgvDashboardBooks.DefaultCellStyle = dataGridViewCellStyle6;
             dgvDashboardBooks.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDashboardBooks.Location = new Point(25, 96);
+            dgvDashboardBooks.Location = new Point(3, 96);
             dgvDashboardBooks.Name = "dgvDashboardBooks";
             dgvDashboardBooks.ReadOnly = true;
             dgvDashboardBooks.RowHeadersVisible = false;
             dgvDashboardBooks.RowHeadersWidth = 51;
-            dgvDashboardBooks.Size = new Size(537, 361);
+            dgvDashboardBooks.Size = new Size(576, 385);
             dgvDashboardBooks.TabIndex = 4;
             dgvDashboardBooks.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvDashboardBooks.ThemeStyle.HeaderStyle.BackColor = Color.MediumOrchid;
-            dgvDashboardBooks.ThemeStyle.HeaderStyle.Font = new Font("Cairo", 9F);
+            dgvDashboardBooks.ThemeStyle.HeaderStyle.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvDashboardBooks.ThemeStyle.HeaderStyle.Height = 30;
             dgvDashboardBooks.ThemeStyle.ReadOnly = true;
             dgvDashboardBooks.ThemeStyle.RowsStyle.Font = new Font("Cairo", 9F);
@@ -290,7 +405,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.ColoredBooks;
-            pictureBox1.Location = new Point(10, 52);
+            pictureBox1.Location = new Point(18, 78);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(47, 59);
             pictureBox1.TabIndex = 5;
@@ -299,7 +414,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.ColoredPeople;
-            pictureBox2.Location = new Point(4, 152);
+            pictureBox2.Location = new Point(15, 177);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(60, 59);
             pictureBox2.TabIndex = 5;
@@ -308,7 +423,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.icons8_borrow_book_50;
-            pictureBox3.Location = new Point(3, 271);
+            pictureBox3.Location = new Point(18, 284);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(53, 59);
             pictureBox3.TabIndex = 9;
@@ -317,7 +432,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.icons8_debt_64;
-            pictureBox4.Location = new Point(0, 372);
+            pictureBox4.Location = new Point(18, 387);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(59, 59);
             pictureBox4.TabIndex = 10;
@@ -325,8 +440,8 @@
             // 
             // btnLogout
             // 
-            btnLogout.BorderRadius = 3;
-            btnLogout.CustomizableEdges = customizableEdges3;
+            btnLogout.BorderRadius = 5;
+            btnLogout.CustomizableEdges = customizableEdges7;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -334,29 +449,34 @@
             btnLogout.FillColor = Color.Purple;
             btnLogout.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(40, 523);
+            btnLogout.Location = new Point(32, 505);
             btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnLogout.Size = new Size(202, 56);
             btnLogout.TabIndex = 8;
             btnLogout.Text = "Logout";
+            btnLogout.Click += btnLogout_Click;
             // 
-            // panel3
+            // guna2Panel3
             // 
-            panel3.BackColor = SystemColors.ButtonFace;
-            panel3.Controls.Add(btnLogout);
-            panel3.Controls.Add(pictureBox4);
-            panel3.Controls.Add(pictureBox3);
-            panel3.Controls.Add(pictureBox2);
-            panel3.Controls.Add(pictureBox1);
-            panel3.Controls.Add(lblFines);
-            panel3.Controls.Add(lblBorrowings);
-            panel3.Controls.Add(lblMembers);
-            panel3.Controls.Add(lblBooks);
-            panel3.Location = new Point(12, 131);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(290, 595);
-            panel3.TabIndex = 11;
+            guna2Panel3.BackColor = Color.Transparent;
+            guna2Panel3.BorderRadius = 15;
+            guna2Panel3.Controls.Add(btnLogout);
+            guna2Panel3.Controls.Add(lblBooks);
+            guna2Panel3.Controls.Add(pictureBox1);
+            guna2Panel3.Controls.Add(pictureBox4);
+            guna2Panel3.Controls.Add(lblFines);
+            guna2Panel3.Controls.Add(pictureBox2);
+            guna2Panel3.Controls.Add(pictureBox3);
+            guna2Panel3.Controls.Add(lblBorrowings);
+            guna2Panel3.Controls.Add(lblMembers);
+            guna2Panel3.CustomizableEdges = customizableEdges9;
+            guna2Panel3.FillColor = SystemColors.ButtonFace;
+            guna2Panel3.Location = new Point(18, 135);
+            guna2Panel3.Name = "guna2Panel3";
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Panel3.Size = new Size(286, 591);
+            guna2Panel3.TabIndex = 9;
             // 
             // frmDashboard
             // 
@@ -364,7 +484,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1551, 762);
-            Controls.Add(panel3);
+            Controls.Add(guna2Panel3);
             Controls.Add(MainPanel);
             Controls.Add(label3);
             Name = "frmDashboard";
@@ -372,6 +492,12 @@
             Load += frmDashboard_Load;
             MainPanel.ResumeLayout(false);
             MainPanel.PerformLayout();
+            guna2Panel2.ResumeLayout(false);
+            guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDashboardMembers).EndInit();
@@ -382,8 +508,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            guna2Panel3.ResumeLayout(false);
+            guna2Panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -408,6 +534,14 @@
         private Panel panel1;
         private Label label1;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
-        private Panel panel3;
+        private Label label4;
+        private Label label5;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBooksCount;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMembersCount;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
     }
 }

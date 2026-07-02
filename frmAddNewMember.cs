@@ -50,6 +50,7 @@ namespace LibraryManagmentSystem
 
         private void _Load()
         {
+            dtpJoinDate.Value = DateTime.Now;
             //findout whether the member is new or not.
             if (_MemberID == -1)
             {

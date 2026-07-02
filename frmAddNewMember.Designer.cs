@@ -78,6 +78,7 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = SystemColors.ButtonFace;
+            guna2Panel1.BorderRadius = 15;
             guna2Panel1.Controls.Add(btnCancelMember);
             guna2Panel1.Controls.Add(btnSaveMember);
             guna2Panel1.Controls.Add(dtpJoinDate);
@@ -140,7 +141,7 @@
             // 
             // dtpJoinDate
             // 
-            dtpJoinDate.BorderRadius = 3;
+            dtpJoinDate.BorderRadius = 5;
             dtpJoinDate.Checked = true;
             dtpJoinDate.CustomizableEdges = customizableEdges5;
             dtpJoinDate.FillColor = Color.MediumOrchid;
@@ -158,6 +159,7 @@
             // 
             // tbPhone
             // 
+            tbPhone.BorderRadius = 5;
             tbPhone.CustomizableEdges = customizableEdges7;
             tbPhone.DefaultText = "";
             tbPhone.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -178,6 +180,7 @@
             // 
             // tbEmail
             // 
+            tbEmail.BorderRadius = 5;
             tbEmail.CustomizableEdges = customizableEdges9;
             tbEmail.DefaultText = "";
             tbEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -198,6 +201,7 @@
             // 
             // tbAddress
             // 
+            tbAddress.BorderRadius = 5;
             tbAddress.CustomizableEdges = customizableEdges11;
             tbAddress.DefaultText = "";
             tbAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -218,6 +222,7 @@
             // 
             // tbName
             // 
+            tbName.BorderRadius = 5;
             tbName.CustomizableEdges = customizableEdges13;
             tbName.DefaultText = "";
             tbName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);

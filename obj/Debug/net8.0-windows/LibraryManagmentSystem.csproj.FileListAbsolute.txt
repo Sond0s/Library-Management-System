@@ -71,3 +71,6 @@ C:\Users\user\source\repos\WindowsForms\LibraryManagmentSystem\obj\Debug\net8.0-
 C:\Users\user\source\repos\WindowsForms\LibraryManagmentSystem\obj\Debug\net8.0-windows\LibraryManagmentSystem.frmAddNewBook.resources
 C:\Users\user\source\repos\WindowsForms\LibraryManagmentSystem\obj\Debug\net8.0-windows\LibraryManagmentSystem.Properties.Resources.resources
 C:\Users\user\source\repos\WindowsForms\LibraryManagmentSystem\obj\Debug\net8.0-windows\LibraryManagmentSystem.frmAddNewMember.resources
+C:\Users\user\source\repos\WindowsForms\LibraryManagmentSystem\obj\Debug\net8.0-windows\LibraryManagmentSystem.frmBorrowings.resources
+C:\Users\user\source\repos\WindowsForms\LibraryManagmentSystem\obj\Debug\net8.0-windows\LibraryManagmentSystem.frmBorrowBook.resources
+C:\Users\user\source\repos\WindowsForms\LibraryManagmentSystem\obj\Debug\net8.0-windows\LibraryManagmentSystem.frmFines.resources

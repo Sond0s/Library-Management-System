@@ -21,18 +21,18 @@ namespace LibraryManagmentSystem
 
         private void frmMembers_Load(object sender, EventArgs e)
         {
-            RefreshMembersList();
-            ChangeColors();
+            _RefreshMembersList();
+            _ChangeColors();
 
         }
 
-        private void ChangeColors()
+        private void _ChangeColors()
         {
             this.BackColor = ThemeColor.BackColor;
             btnAddMember.FillColor = ThemeColor.btnColor;
         }
 
-        private void RefreshMembersList()
+        private void _RefreshMembersList()
         {
             DataTable dt = MembersBLL.ListAllMembers();
             dgvListMembers.DataSource = dt;
@@ -68,7 +68,7 @@ namespace LibraryManagmentSystem
                 if (MembersBLL.DeleteMember(MemberID))
                 {
                     MessageBox.Show("Member Deleted Successfully.", "Succeded");
-                    RefreshMembersList();
+                    _RefreshMembersList();
                 }
                 else
                 {

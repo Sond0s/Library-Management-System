@@ -26,6 +26,16 @@ namespace LibraryManagmentSystem
 
         }
 
+        private void _LoadDataGridLists()
+        {
+            DataTable dt1 = new DataTable();
+            DataTable dt2 = new DataTable();
+            dt1 = BooksBLL.GetAllBooks();
+            dt2 = MembersBLL.ListAllMembers();
+            dgvDashboardBooks.DataSource = dt1;
+            dgvDashboardMembers.DataSource = dt2;
+        }
+
         private void ChangeMouseEnter(Label label)
         {
             label.Cursor = Cursors.Hand;
@@ -37,7 +47,6 @@ namespace LibraryManagmentSystem
             label.Cursor = Cursors.Default;
             label.ForeColor = Color.Black;
         }
-
 
         private void lblMembers_Click(object sender, EventArgs e)
         {
@@ -65,9 +74,9 @@ namespace LibraryManagmentSystem
         private void frmDashboard_Load(object sender, EventArgs e)
         {
             //Load all the data of the views.
-            LoadDataGridLists();
-
-            //ColorTranslator.FromHtml("#A536D1")
+            _LoadDataGridLists();
+            _GetTotalBooks();
+            _GetTotalMembers();
             this.BackColor = ThemeColor.BackColor;
             btnLogout.FillColor = ThemeColor.btnColor;
             //Get today's date.
@@ -75,14 +84,28 @@ namespace LibraryManagmentSystem
             lblTodayTime.Text = Date;
         }
 
-        private void LoadDataGridLists()
+        private void _GetTotalBooks()
         {
-            DataTable dt1 = new DataTable();
-            DataTable dt2 = new DataTable();
-            dt1 = BooksBLL.GetAllBooks();
-            dt2 = MembersBLL.ListAllMembers();
-            dgvDashboardBooks.DataSource = dt1;
-            dgvDashboardMembers.DataSource = dt2;
+            if (BooksBLL.CountBooks() != -1)
+            {
+                lblBooksCount.Text = BooksBLL.CountBooks().ToString();
+            }
+            else
+            {
+                lblBooks.Text = "No Available Books.";
+            }
+        }
+
+        private void _GetTotalMembers()
+        {
+            if (MembersBLL.CountMembers() != -1)
+            {
+                lblMembersCount.Text = MembersBLL.CountMembers().ToString();
+            }
+            else
+            {
+                lblMembersCount.Text = "No Available Members.";
+            }
         }
 
         private void lblBooks_MouseEnter(object sender, EventArgs e)
@@ -113,6 +136,24 @@ namespace LibraryManagmentSystem
         private void lblFines_MouseLeave(object sender, EventArgs e)
         {
             ChangeMouseLeave(lblFines);
+        }
+
+        private void lblBorrowings_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmBorrowings();
+            frm.ShowDialog();
+        }
+
+        private void lblFines_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmFines();
+            frm.ShowDialog();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmLogin();
+            frm.ShowDialog();
         }
     }
 }

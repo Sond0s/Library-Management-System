@@ -17,7 +17,7 @@ namespace LibraryManagmentSystem
         enMode Mode;
         //passed parameter value to check whether the book in update or add mode.
         private int _BookID;
-        //Book=  1- new book || = 2- Find(BookID)
+        //Book=  1- new book || = 2- Find(BookCopyID)
         BooksBLL Book;
 
         public frmAddNewBook(int BookID)
@@ -25,7 +25,7 @@ namespace LibraryManagmentSystem
             InitializeComponent();
 
             //I'll use the same form in the 2 Cases : 1- Add 2- Update
-            //if BookID = -1 => get the form use in the Add mode.
+            //if BookCopyID = -1 => get the form use in the Add mode.
             //otherwise , the form use will be in Update Mode (Edit).
             _BookID = BookID;
             if (BookID == -1)
@@ -52,8 +52,10 @@ namespace LibraryManagmentSystem
             btnSaveBook.FillColor = ThemeColor.btnColor;
             btnCancelBook.FillColor = ThemeColor.btnColor;
         }
+
         private void LoadCategories()
         {
+            dtPublishDate.Value = DateTime.Now;
             DataTable dt = CategoriesBLL.ListAllCategories();
 
             //loop through each row in the data table and fill the combo box items with the given values.
@@ -62,7 +64,6 @@ namespace LibraryManagmentSystem
                 cbCategory.Items.Add(dr["CategoryName"]);
             }
         }
-
 
         private void LoadData()
         {

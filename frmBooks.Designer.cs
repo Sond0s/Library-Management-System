@@ -35,6 +35,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvBooks = new Guna.UI2.WinForms.Guna2DataGridView();
             cmsProperties = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             editToolStripMenuItem = new ToolStripMenuItem();
@@ -42,10 +44,10 @@
             lblBooksTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnAddBook = new Guna.UI2.WinForms.Guna2TileButton();
             tbSearchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            BooksPanel = new Panel();
+            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)dgvBooks).BeginInit();
             cmsProperties.SuspendLayout();
-            BooksPanel.SuspendLayout();
+            guna2Panel1.SuspendLayout();
             SuspendLayout();
             // 
             // dgvBooks
@@ -68,14 +70,14 @@
             dgvBooks.ContextMenuStrip = cmsProperties;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Cairo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvBooks.DefaultCellStyle = dataGridViewCellStyle3;
             dgvBooks.GridColor = Color.FromArgb(231, 229, 255);
-            dgvBooks.Location = new Point(22, 129);
+            dgvBooks.Location = new Point(37, 151);
             dgvBooks.Name = "dgvBooks";
             dgvBooks.ReadOnly = true;
             dgvBooks.RowHeadersVisible = false;
@@ -87,7 +89,7 @@
             dgvBooks.ThemeStyle.HeaderStyle.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvBooks.ThemeStyle.HeaderStyle.Height = 30;
             dgvBooks.ThemeStyle.ReadOnly = true;
-            dgvBooks.ThemeStyle.RowsStyle.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dgvBooks.ThemeStyle.RowsStyle.Font = new Font("Cairo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvBooks.ThemeStyle.RowsStyle.Height = 29;
             // 
             // cmsProperties
@@ -97,7 +99,7 @@
             cmsProperties.Items.AddRange(new ToolStripItem[] { editToolStripMenuItem, deleteToolStripMenuItem });
             cmsProperties.Name = "cmsProperties";
             cmsProperties.RenderStyle.ArrowColor = Color.MediumOrchid;
-            cmsProperties.RenderStyle.BorderColor = Color.Gainsboro;
+            cmsProperties.RenderStyle.BorderColor = Color.Transparent;
             cmsProperties.RenderStyle.ColorTable = null;
             cmsProperties.RenderStyle.RoundedEdges = true;
             cmsProperties.RenderStyle.SelectionArrowColor = Color.White;
@@ -139,7 +141,7 @@
             // 
             // btnAddBook
             // 
-            btnAddBook.BorderRadius = 3;
+            btnAddBook.BorderRadius = 5;
             btnAddBook.CustomizableEdges = customizableEdges1;
             btnAddBook.DisabledState.BorderColor = Color.DarkGray;
             btnAddBook.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -148,7 +150,7 @@
             btnAddBook.FillColor = Color.MediumOrchid;
             btnAddBook.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold);
             btnAddBook.ForeColor = Color.White;
-            btnAddBook.Location = new Point(1013, 52);
+            btnAddBook.Location = new Point(1028, 54);
             btnAddBook.Name = "btnAddBook";
             btnAddBook.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnAddBook.Size = new Size(168, 46);
@@ -158,6 +160,7 @@
             // 
             // tbSearchBar
             // 
+            tbSearchBar.BorderRadius = 5;
             tbSearchBar.CustomizableEdges = customizableEdges3;
             tbSearchBar.DefaultText = "";
             tbSearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -167,7 +170,7 @@
             tbSearchBar.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbSearchBar.Font = new Font("Cairo", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbSearchBar.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbSearchBar.Location = new Point(22, 52);
+            tbSearchBar.Location = new Point(37, 54);
             tbSearchBar.Margin = new Padding(8, 11, 8, 11);
             tbSearchBar.Name = "tbSearchBar";
             tbSearchBar.PlaceholderText = "Search With Title";
@@ -177,32 +180,35 @@
             tbSearchBar.TabIndex = 13;
             tbSearchBar.TextChanged += tbSearchBar_TextChanged;
             // 
-            // BooksPanel
+            // guna2Panel1
             // 
-            BooksPanel.BackColor = SystemColors.ButtonFace;
-            BooksPanel.Controls.Add(dgvBooks);
-            BooksPanel.Controls.Add(tbSearchBar);
-            BooksPanel.Controls.Add(btnAddBook);
-            BooksPanel.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            BooksPanel.Location = new Point(30, 147);
-            BooksPanel.Name = "BooksPanel";
-            BooksPanel.Size = new Size(1214, 512);
-            BooksPanel.TabIndex = 14;
+            guna2Panel1.BackColor = Color.Transparent;
+            guna2Panel1.BorderRadius = 15;
+            guna2Panel1.Controls.Add(dgvBooks);
+            guna2Panel1.Controls.Add(tbSearchBar);
+            guna2Panel1.Controls.Add(btnAddBook);
+            guna2Panel1.CustomizableEdges = customizableEdges5;
+            guna2Panel1.FillColor = SystemColors.ButtonFace;
+            guna2Panel1.Location = new Point(25, 118);
+            guna2Panel1.Name = "guna2Panel1";
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel1.Size = new Size(1232, 552);
+            guna2Panel1.TabIndex = 15;
             // 
             // frmBooks
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1256, 684);
-            Controls.Add(BooksPanel);
+            ClientSize = new Size(1282, 732);
+            Controls.Add(guna2Panel1);
             Controls.Add(lblBooksTitle);
             Name = "frmBooks";
             Text = "Books";
             Load += frmBooks_Load;
             ((System.ComponentModel.ISupportInitialize)dgvBooks).EndInit();
             cmsProperties.ResumeLayout(false);
-            BooksPanel.ResumeLayout(false);
+            guna2Panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,6 +221,6 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsProperties;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem deleteToolStripMenuItem;
-        private Panel BooksPanel;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

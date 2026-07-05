@@ -73,6 +73,7 @@ namespace LibraryManagmentSystem
         {
             Form frm = new frmBorrowBook();
             frm.ShowDialog();
+            _RefreshBorrowingsList();
         }
 
         private void cmsDelete_Click(object sender, EventArgs e)
@@ -105,7 +106,8 @@ namespace LibraryManagmentSystem
 
 
             int BookCopyID = BookCopiesBLL.GetBookCopyID(BorrowID);
-            if (MessageBox.Show($"Member \'{currentMember}\' will return \'{currentBook}\'.", "Return" , MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show($"Member \'{currentMember}\' will return \'{currentBook}\'.", "Return" , MessageBoxButtons.OKCancel
+                , MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
                 FinesBLL fine = FinesBLL.CreateFineIfLate(BorrowID, DueDate);
                 //Check if the member has fine.   
@@ -113,7 +115,8 @@ namespace LibraryManagmentSystem
                 {
                     //add new fine if delayed days are checked.
                     fine.AddNewFine();
-                    MessageBox.Show($"Member \'{currentMember}\' have delayed return with {fine.Amount} $ should be paid..", "Payment");
+                    MessageBox.Show($"Member \'{currentMember}\' have delayed return with {fine.Amount}$ should be paid..", "Payment"
+                        , MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 //then update the borrowing return status.

@@ -42,8 +42,7 @@
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             lblUsername = new Label();
             label3 = new Label();
             lblBooks = new Label();
@@ -70,8 +69,9 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
-            btnLogout = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            pictureBox7 = new PictureBox();
+            lblLogout = new Label();
             MainPanel.SuspendLayout();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -86,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // lblUsername
@@ -101,23 +102,23 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Freestyle Script", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Freestyle Script", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(12, 16);
+            label3.Location = new Point(18, 16);
             label3.Name = "label3";
-            label3.Size = new Size(252, 59);
+            label3.Size = new Size(280, 71);
             label3.TabIndex = 1;
-            label3.Text = "The Book Shelf";
+            label3.Text = "The BookShelf";
             // 
             // lblBooks
             // 
             lblBooks.AutoSize = true;
             lblBooks.Cursor = Cursors.Hand;
             lblBooks.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBooks.Location = new Point(81, 89);
+            lblBooks.Location = new Point(85, 78);
             lblBooks.Name = "lblBooks";
             lblBooks.Size = new Size(114, 39);
-            lblBooks.TabIndex = 3;
+            lblBooks.TabIndex = 0;
             lblBooks.Text = "Books";
             lblBooks.Click += lblBooks_Click;
             lblBooks.MouseEnter += lblBooks_MouseEnter;
@@ -127,10 +128,10 @@
             // 
             lblMembers.AutoSize = true;
             lblMembers.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMembers.Location = new Point(81, 188);
+            lblMembers.Location = new Point(85, 177);
             lblMembers.Name = "lblMembers";
             lblMembers.Size = new Size(165, 39);
-            lblMembers.TabIndex = 4;
+            lblMembers.TabIndex = 1;
             lblMembers.Text = "Members";
             lblMembers.Click += lblMembers_Click;
             lblMembers.MouseEnter += lblMembers_MouseEnter;
@@ -140,10 +141,10 @@
             // 
             lblBorrowings.AutoSize = true;
             lblBorrowings.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblBorrowings.Location = new Point(81, 294);
+            lblBorrowings.Location = new Point(79, 284);
             lblBorrowings.Name = "lblBorrowings";
             lblBorrowings.Size = new Size(201, 39);
-            lblBorrowings.TabIndex = 5;
+            lblBorrowings.TabIndex = 2;
             lblBorrowings.Text = "Borrowings";
             lblBorrowings.Click += lblBorrowings_Click;
             lblBorrowings.MouseEnter += lblBorrowings_MouseEnter;
@@ -153,10 +154,10 @@
             // 
             lblFines.AutoSize = true;
             lblFines.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblFines.Location = new Point(83, 398);
+            lblFines.Location = new Point(87, 387);
             lblFines.Name = "lblFines";
             lblFines.Size = new Size(101, 39);
-            lblFines.TabIndex = 6;
+            lblFines.TabIndex = 3;
             lblFines.Text = "Fines";
             lblFines.Click += lblFines_Click;
             lblFines.MouseEnter += lblFines_MouseEnter;
@@ -405,7 +406,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.ColoredBooks;
-            pictureBox1.Location = new Point(18, 78);
+            pictureBox1.Location = new Point(22, 68);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(47, 59);
             pictureBox1.TabIndex = 5;
@@ -414,7 +415,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.ColoredPeople;
-            pictureBox2.Location = new Point(15, 177);
+            pictureBox2.Location = new Point(19, 166);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(60, 59);
             pictureBox2.TabIndex = 5;
@@ -423,7 +424,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.icons8_borrow_book_50;
-            pictureBox3.Location = new Point(18, 284);
+            pictureBox3.Location = new Point(22, 273);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(53, 59);
             pictureBox3.TabIndex = 9;
@@ -432,36 +433,18 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.icons8_debt_64;
-            pictureBox4.Location = new Point(18, 387);
+            pictureBox4.Location = new Point(22, 376);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(59, 59);
             pictureBox4.TabIndex = 10;
             pictureBox4.TabStop = false;
             // 
-            // btnLogout
-            // 
-            btnLogout.BorderRadius = 5;
-            btnLogout.CustomizableEdges = customizableEdges7;
-            btnLogout.DisabledState.BorderColor = Color.DarkGray;
-            btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogout.FillColor = Color.Purple;
-            btnLogout.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(32, 505);
-            btnLogout.Name = "btnLogout";
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnLogout.Size = new Size(202, 56);
-            btnLogout.TabIndex = 8;
-            btnLogout.Text = "Logout";
-            btnLogout.Click += btnLogout_Click;
-            // 
             // guna2Panel3
             // 
             guna2Panel3.BackColor = Color.Transparent;
             guna2Panel3.BorderRadius = 15;
-            guna2Panel3.Controls.Add(btnLogout);
+            guna2Panel3.Controls.Add(pictureBox7);
+            guna2Panel3.Controls.Add(lblLogout);
             guna2Panel3.Controls.Add(lblBooks);
             guna2Panel3.Controls.Add(pictureBox1);
             guna2Panel3.Controls.Add(pictureBox4);
@@ -470,13 +453,35 @@
             guna2Panel3.Controls.Add(pictureBox3);
             guna2Panel3.Controls.Add(lblBorrowings);
             guna2Panel3.Controls.Add(lblMembers);
-            guna2Panel3.CustomizableEdges = customizableEdges9;
+            guna2Panel3.CustomizableEdges = customizableEdges7;
             guna2Panel3.FillColor = SystemColors.ButtonFace;
             guna2Panel3.Location = new Point(18, 135);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel3.Size = new Size(286, 591);
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel3.Size = new Size(286, 602);
             guna2Panel3.TabIndex = 9;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.icons8_logout_64;
+            pictureBox7.Location = new Point(22, 472);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(59, 59);
+            pictureBox7.TabIndex = 12;
+            pictureBox7.TabStop = false;
+            // 
+            // lblLogout
+            // 
+            lblLogout.AutoSize = true;
+            lblLogout.Font = new Font("Tahoma", 19.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLogout.Location = new Point(85, 483);
+            lblLogout.Name = "lblLogout";
+            lblLogout.Size = new Size(128, 39);
+            lblLogout.TabIndex = 4;
+            lblLogout.Text = "Logout";
+            lblLogout.Click += lblLogout_Click;
+            lblLogout.MouseEnter += lblLogout_MouseEnter;
+            lblLogout.MouseLeave += lblLogout_MouseLeave;
             // 
             // frmDashboard
             // 
@@ -487,6 +492,7 @@
             Controls.Add(guna2Panel3);
             Controls.Add(MainPanel);
             Controls.Add(label3);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmDashboard";
             Text = "Dashboard";
             Load += frmDashboard_Load;
@@ -510,6 +516,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             guna2Panel3.ResumeLayout(false);
             guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -533,7 +540,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvDashboardMembers;
         private Panel panel1;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Label label4;
         private Label label5;
         private PictureBox pictureBox5;
@@ -543,5 +549,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private PictureBox pictureBox7;
+        private Label lblLogout;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -42,6 +43,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBorrowBook));
             lblAddNewBook = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel1 = new Guna.UI2.WinForms.Guna2Panel();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
@@ -54,7 +56,9 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            epAddBorrow = new ErrorProvider(components);
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)epAddBorrow).BeginInit();
             SuspendLayout();
             // 
             // lblAddNewBook
@@ -94,7 +98,7 @@
             // btnSave
             // 
             btnSave.BorderColor = Color.Transparent;
-            btnSave.BorderRadius = 5;
+            btnSave.BorderRadius = 15;
             btnSave.CustomBorderColor = Color.Transparent;
             btnSave.CustomizableEdges = customizableEdges1;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
@@ -104,10 +108,10 @@
             btnSave.FillColor = Color.MediumOrchid;
             btnSave.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(252, 499);
+            btnSave.Location = new Point(228, 492);
             btnSave.Name = "btnSave";
             btnSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSave.Size = new Size(187, 54);
+            btnSave.Size = new Size(211, 61);
             btnSave.TabIndex = 12;
             btnSave.Text = "Save";
             btnSave.Click += btnSave_Click;
@@ -115,7 +119,7 @@
             // btnCancel
             // 
             btnCancel.BorderColor = Color.Transparent;
-            btnCancel.BorderRadius = 5;
+            btnCancel.BorderRadius = 15;
             btnCancel.CustomizableEdges = customizableEdges3;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -127,13 +131,14 @@
             btnCancel.Location = new Point(674, 499);
             btnCancel.Name = "btnCancel";
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnCancel.Size = new Size(187, 54);
+            btnCancel.Size = new Size(211, 61);
             btnCancel.TabIndex = 10;
             btnCancel.Text = "Cancel";
+            btnCancel.Click += btnCancel_Click;
             // 
             // dtpDueDate
             // 
-            dtpDueDate.BorderRadius = 5;
+            dtpDueDate.BorderRadius = 10;
             dtpDueDate.Checked = true;
             dtpDueDate.CustomizableEdges = customizableEdges5;
             dtpDueDate.FillColor = Color.MediumOrchid;
@@ -151,7 +156,7 @@
             // 
             // dtpCurrentDate
             // 
-            dtpCurrentDate.BorderRadius = 5;
+            dtpCurrentDate.BorderRadius = 10;
             dtpCurrentDate.Checked = true;
             dtpCurrentDate.CustomizableEdges = customizableEdges7;
             dtpCurrentDate.FillColor = Color.MediumOrchid;
@@ -171,7 +176,7 @@
             // 
             cbChooseMember.AllowDrop = true;
             cbChooseMember.BackColor = Color.Transparent;
-            cbChooseMember.BorderRadius = 5;
+            cbChooseMember.BorderRadius = 10;
             cbChooseMember.CustomizableEdges = customizableEdges9;
             cbChooseMember.DrawMode = DrawMode.OwnerDrawFixed;
             cbChooseMember.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -185,11 +190,12 @@
             cbChooseMember.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cbChooseMember.Size = new Size(299, 36);
             cbChooseMember.TabIndex = 7;
+            cbChooseMember.Validating += cbChooseMember_Validating;
             // 
             // cbChooseBook
             // 
             cbChooseBook.BackColor = Color.Transparent;
-            cbChooseBook.BorderRadius = 5;
+            cbChooseBook.BorderRadius = 10;
             cbChooseBook.CustomizableEdges = customizableEdges11;
             cbChooseBook.DrawMode = DrawMode.OwnerDrawFixed;
             cbChooseBook.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -203,6 +209,7 @@
             cbChooseBook.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cbChooseBook.Size = new Size(299, 36);
             cbChooseBook.TabIndex = 6;
+            cbChooseBook.Validating += cbChooseBook_Validating;
             // 
             // guna2HtmlLabel4
             // 
@@ -210,9 +217,9 @@
             guna2HtmlLabel4.Font = new Font("Cairo", 16.2F, FontStyle.Bold);
             guna2HtmlLabel4.Location = new Point(32, 356);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(211, 52);
+            guna2HtmlLabel4.Size = new Size(204, 52);
             guna2HtmlLabel4.TabIndex = 3;
-            guna2HtmlLabel4.Text = "Borrow Due Date:";
+            guna2HtmlLabel4.Text = "Borrow Due Date";
             // 
             // guna2HtmlLabel3
             // 
@@ -220,9 +227,9 @@
             guna2HtmlLabel3.Font = new Font("Cairo", 16.2F, FontStyle.Bold);
             guna2HtmlLabel3.Location = new Point(32, 253);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(254, 52);
+            guna2HtmlLabel3.Size = new Size(247, 52);
             guna2HtmlLabel3.TabIndex = 2;
-            guna2HtmlLabel3.Text = "Borrow Current Date:";
+            guna2HtmlLabel3.Text = "Borrow Current Date";
             // 
             // guna2HtmlLabel2
             // 
@@ -230,9 +237,9 @@
             guna2HtmlLabel2.Font = new Font("Cairo", 16.2F, FontStyle.Bold);
             guna2HtmlLabel2.Location = new Point(32, 146);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(202, 52);
+            guna2HtmlLabel2.Size = new Size(195, 52);
             guna2HtmlLabel2.TabIndex = 1;
-            guna2HtmlLabel2.Text = "Choose Member:";
+            guna2HtmlLabel2.Text = "Choose Member";
             // 
             // guna2HtmlLabel1
             // 
@@ -240,9 +247,14 @@
             guna2HtmlLabel1.Font = new Font("Cairo", 16.2F, FontStyle.Bold);
             guna2HtmlLabel1.Location = new Point(32, 41);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(164, 52);
+            guna2HtmlLabel1.Size = new Size(157, 52);
             guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "Choose Book:";
+            guna2HtmlLabel1.Text = "Choose Book";
+            // 
+            // epAddBorrow
+            // 
+            epAddBorrow.ContainerControl = this;
+            epAddBorrow.Icon = (Icon)resources.GetObject("epAddBorrow.Icon");
             // 
             // frmBorrowBook
             // 
@@ -251,11 +263,13 @@
             ClientSize = new Size(1155, 712);
             Controls.Add(panel1);
             Controls.Add(lblAddNewBook);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmBorrowBook";
             Text = "BorrowBook";
             Load += frmBorrowBook_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)epAddBorrow).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -274,5 +288,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbChooseMember;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpDueDate;
         private Guna.UI2.WinForms.Guna2Button btnSave;
+        private ErrorProvider epAddBorrow;
     }
 }

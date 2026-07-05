@@ -84,44 +84,77 @@ namespace LibraryManagmentSystem
 
         private void btnSaveMember_Click(object sender, EventArgs e)
         {
+            //check required fields before save.
+            if (!this.ValidateChildren()) // triggers Validating on all child controls
+            {
+                MessageBox.Show("Please fix the highlighted fields before saving.", "Validation Error");
+                return;
+            }
+
             Member.Name = tbName.Text;
             Member.Email = tbEmail.Text;
             Member.Address = tbAddress.Text;
             Member.Phone = tbPhone.Text;
             Member.JoinDate = dtpJoinDate.Value;
 
-           
-                   if(Mode== enMode.Add)
-                    {
-                        if (Member.Save())
-                        {
-                            MessageBox.Show("Member Added Successfully.", "Success", MessageBoxButtons.OK);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed to add new member.", "Failed", MessageBoxButtons.OK);
 
-                        }
-                    }
-                   
-         
-                    if(Mode == enMode.Update)
-                         {
-                    if (Member.Save())
-                    {
-                        MessageBox.Show("Member Updated Successfully.", "Success", MessageBoxButtons.OK);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to Update data.", "Failed", MessageBoxButtons.OK);
+            if (Mode == enMode.Add)
+            {
+                if (Member.Save())
+                {
+                    MessageBox.Show("Member Added Successfully.", "Success", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add new member.", "Failed", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
 
-                    }
+                }
             }
-                         
-         
 
+
+            if (Mode == enMode.Update)
+            {
+                if (Member.Save())
+                {
+                    MessageBox.Show("Member Updated Successfully.", "Success", MessageBoxButtons.OK
+                        , MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Failed to Update data.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
-        
+
+
+
+        }
+
+        //Name , Address, Email , Phone => Required
+        private void tbName_Validating(object sender, CancelEventArgs e)
+        {
+            ValidationHelper.ValidateFields(sender, e, epAddMember);
+        }
+
+        private void tbAddress_Validating(object sender, CancelEventArgs e)
+        {
+            ValidationHelper.ValidateFields(sender, e, epAddMember);
+
+        }
+
+        private void tbEmail_Validating(object sender, CancelEventArgs e)
+        {
+            ValidationHelper.ValidateFields(sender, e, epAddMember);
+
+        }
+
+        private void tbPhone_Validating(object sender, CancelEventArgs e)
+        {
+            ValidationHelper.ValidateFields(sender, e, epAddMember);
+
+        }
 
         private void btnCancelMember_Click(object sender, EventArgs e)
         {

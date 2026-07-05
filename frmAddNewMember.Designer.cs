@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -44,6 +45,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddNewMember));
             lblAddNewBook = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             btnCancelMember = new Guna.UI2.WinForms.Guna2Button();
@@ -60,7 +62,9 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            epAddMember = new ErrorProvider(components);
             guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)epAddMember).BeginInit();
             SuspendLayout();
             // 
             // lblAddNewBook
@@ -103,7 +107,7 @@
             // 
             // btnCancelMember
             // 
-            btnCancelMember.BorderRadius = 3;
+            btnCancelMember.BorderRadius = 15;
             btnCancelMember.CustomizableEdges = customizableEdges1;
             btnCancelMember.DisabledState.BorderColor = Color.DarkGray;
             btnCancelMember.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -112,17 +116,17 @@
             btnCancelMember.FillColor = Color.MediumOrchid;
             btnCancelMember.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold);
             btnCancelMember.ForeColor = Color.White;
-            btnCancelMember.Location = new Point(707, 549);
+            btnCancelMember.Location = new Point(703, 540);
             btnCancelMember.Name = "btnCancelMember";
             btnCancelMember.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnCancelMember.Size = new Size(185, 49);
-            btnCancelMember.TabIndex = 44;
+            btnCancelMember.Size = new Size(239, 58);
+            btnCancelMember.TabIndex = 6;
             btnCancelMember.Text = "Cancel";
             btnCancelMember.Click += btnCancelMember_Click;
             // 
             // btnSaveMember
             // 
-            btnSaveMember.BorderRadius = 3;
+            btnSaveMember.BorderRadius = 15;
             btnSaveMember.CustomizableEdges = customizableEdges3;
             btnSaveMember.DisabledState.BorderColor = Color.DarkGray;
             btnSaveMember.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -131,17 +135,17 @@
             btnSaveMember.FillColor = Color.MediumOrchid;
             btnSaveMember.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold);
             btnSaveMember.ForeColor = Color.White;
-            btnSaveMember.Location = new Point(322, 549);
+            btnSaveMember.Location = new Point(268, 540);
             btnSaveMember.Name = "btnSaveMember";
             btnSaveMember.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSaveMember.Size = new Size(185, 49);
-            btnSaveMember.TabIndex = 43;
+            btnSaveMember.Size = new Size(239, 58);
+            btnSaveMember.TabIndex = 5;
             btnSaveMember.Text = "Save";
             btnSaveMember.Click += btnSaveMember_Click;
             // 
             // dtpJoinDate
             // 
-            dtpJoinDate.BorderRadius = 5;
+            dtpJoinDate.BorderRadius = 10;
             dtpJoinDate.Checked = true;
             dtpJoinDate.CustomizableEdges = customizableEdges5;
             dtpJoinDate.FillColor = Color.MediumOrchid;
@@ -154,12 +158,12 @@
             dtpJoinDate.Name = "dtpJoinDate";
             dtpJoinDate.ShadowDecoration.CustomizableEdges = customizableEdges6;
             dtpJoinDate.Size = new Size(317, 45);
-            dtpJoinDate.TabIndex = 42;
+            dtpJoinDate.TabIndex = 2;
             dtpJoinDate.Value = new DateTime(2026, 6, 22, 19, 12, 49, 431);
             // 
             // tbPhone
             // 
-            tbPhone.BorderRadius = 5;
+            tbPhone.BorderRadius = 10;
             tbPhone.CustomizableEdges = customizableEdges7;
             tbPhone.DefaultText = "";
             tbPhone.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -176,11 +180,12 @@
             tbPhone.SelectedText = "";
             tbPhone.ShadowDecoration.CustomizableEdges = customizableEdges8;
             tbPhone.Size = new Size(317, 31);
-            tbPhone.TabIndex = 41;
+            tbPhone.TabIndex = 4;
+            tbPhone.Validating += tbPhone_Validating;
             // 
             // tbEmail
             // 
-            tbEmail.BorderRadius = 5;
+            tbEmail.BorderRadius = 10;
             tbEmail.CustomizableEdges = customizableEdges9;
             tbEmail.DefaultText = "";
             tbEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -197,11 +202,12 @@
             tbEmail.SelectedText = "";
             tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges10;
             tbEmail.Size = new Size(317, 31);
-            tbEmail.TabIndex = 40;
+            tbEmail.TabIndex = 3;
+            tbEmail.Validating += tbEmail_Validating;
             // 
             // tbAddress
             // 
-            tbAddress.BorderRadius = 5;
+            tbAddress.BorderRadius = 10;
             tbAddress.CustomizableEdges = customizableEdges11;
             tbAddress.DefaultText = "";
             tbAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -218,11 +224,12 @@
             tbAddress.SelectedText = "";
             tbAddress.ShadowDecoration.CustomizableEdges = customizableEdges12;
             tbAddress.Size = new Size(317, 31);
-            tbAddress.TabIndex = 39;
+            tbAddress.TabIndex = 1;
+            tbAddress.Validating += tbAddress_Validating;
             // 
             // tbName
             // 
-            tbName.BorderRadius = 5;
+            tbName.BorderRadius = 10;
             tbName.CustomizableEdges = customizableEdges13;
             tbName.DefaultText = "";
             tbName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -239,7 +246,8 @@
             tbName.SelectedText = "";
             tbName.ShadowDecoration.CustomizableEdges = customizableEdges14;
             tbName.Size = new Size(317, 31);
-            tbName.TabIndex = 38;
+            tbName.TabIndex = 0;
+            tbName.Validating += tbName_Validating;
             // 
             // lblMemberID
             // 
@@ -297,9 +305,9 @@
             guna2HtmlLabel2.Font = new Font("Cairo", 16.8F, FontStyle.Bold);
             guna2HtmlLabel2.Location = new Point(39, 115);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(76, 55);
+            guna2HtmlLabel2.Size = new Size(126, 55);
             guna2HtmlLabel2.TabIndex = 32;
-            guna2HtmlLabel2.Text = "Name";
+            guna2HtmlLabel2.Text = "Full Name";
             // 
             // guna2HtmlLabel8
             // 
@@ -311,6 +319,11 @@
             guna2HtmlLabel8.TabIndex = 30;
             guna2HtmlLabel8.Text = " ID";
             // 
+            // epAddMember
+            // 
+            epAddMember.ContainerControl = this;
+            epAddMember.Icon = (Icon)resources.GetObject("epAddMember.Icon");
+            // 
             // frmAddNewMember
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -318,11 +331,13 @@
             ClientSize = new Size(1240, 737);
             Controls.Add(guna2Panel1);
             Controls.Add(lblAddNewBook);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmAddNewMember";
             Text = "Add Member";
             Load += frmAddNewMember_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)epAddMember).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -345,5 +360,6 @@
         private Guna.UI2.WinForms.Guna2TextBox tbName;
         private Guna.UI2.WinForms.Guna2Button btnSaveMember;
         private Guna.UI2.WinForms.Guna2Button btnCancelMember;
+        private ErrorProvider epAddMember;
     }
 }

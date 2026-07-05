@@ -50,15 +50,30 @@ namespace LibraryManagmentSystem
 
         private void lblMembers_Click(object sender, EventArgs e)
         {
+            if (!_CurrentUser.HasPermission(UsersBLL.enPermissions.enMembers))
+            {
+                MessageBox.Show("Access Denied for the current User.","Failed", MessageBoxButtons.OK
+                    , MessageBoxIcon.Stop);
+                return;
+            }
             Form frm = new frmMembers();
             frm.ShowDialog();
+            _LoadDataGridLists();
 
         }
 
         private void lblBooks_Click(object sender, EventArgs e)
         {
+            if (!_CurrentUser.HasPermission(UsersBLL.enPermissions.enBooks))
+            {
+                MessageBox.Show("Access Denied for the current User.", "Failed", MessageBoxButtons.OK
+                    , MessageBoxIcon.Stop);
+                return;
+            }
+
             Form frm = new frmBooks();
             frm.ShowDialog();
+            _LoadDataGridLists();
         }
 
         private void lblMembers_MouseEnter(object sender, EventArgs e)
@@ -78,7 +93,6 @@ namespace LibraryManagmentSystem
             _GetTotalBooks();
             _GetTotalMembers();
             this.BackColor = ThemeColor.BackColor;
-            btnLogout.FillColor = ThemeColor.btnColor;
             //Get today's date.
             string Date = DateTime.Now.ToString();
             lblTodayTime.Text = Date;
@@ -140,20 +154,43 @@ namespace LibraryManagmentSystem
 
         private void lblBorrowings_Click(object sender, EventArgs e)
         {
+            if (!_CurrentUser.HasPermission(UsersBLL.enPermissions.enMembers))
+            {
+                MessageBox.Show("Access Denied for the current User.", "Failed" , MessageBoxButtons.OK
+                    , MessageBoxIcon.Stop);
+                return;
+            }
             Form frm = new frmBorrowings();
             frm.ShowDialog();
         }
 
         private void lblFines_Click(object sender, EventArgs e)
         {
+            if (!_CurrentUser.HasPermission(UsersBLL.enPermissions.enFines))
+            {
+                MessageBox.Show("Access Denied for the current User.","Failed", MessageBoxButtons.OK
+                    , MessageBoxIcon.Stop);
+                return;
+            }
             Form frm = new frmFines();
             frm.ShowDialog();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
+        {
+            ChangeMouseEnter(lblLogout);
+        }
+
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
+        {
+            ChangeMouseLeave(lblLogout);
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             Form frm = new frmLogin();
             frm.ShowDialog();
+            this.Close();
         }
     }
 }

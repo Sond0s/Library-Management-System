@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -48,6 +49,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddNewBook));
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblAddNewBook = new Guna.UI2.WinForms.Guna2HtmlLabel();
             sfdSaveImg = new SaveFileDialog();
@@ -72,8 +74,10 @@
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            epAddBook = new ErrorProvider(components);
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbBookimg).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)epAddBook).BeginInit();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -184,7 +188,7 @@
             // btnSaveBook
             // 
             btnSaveBook.BorderColor = Color.Transparent;
-            btnSaveBook.BorderRadius = 5;
+            btnSaveBook.BorderRadius = 15;
             btnSaveBook.CustomizableEdges = customizableEdges3;
             btnSaveBook.DisabledState.BorderColor = Color.DarkGray;
             btnSaveBook.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -193,18 +197,18 @@
             btnSaveBook.FillColor = Color.MediumOrchid;
             btnSaveBook.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold);
             btnSaveBook.ForeColor = Color.White;
-            btnSaveBook.Location = new Point(322, 559);
+            btnSaveBook.Location = new Point(248, 546);
             btnSaveBook.Name = "btnSaveBook";
             btnSaveBook.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSaveBook.Size = new Size(185, 49);
-            btnSaveBook.TabIndex = 26;
+            btnSaveBook.Size = new Size(259, 62);
+            btnSaveBook.TabIndex = 6;
             btnSaveBook.Text = "Save";
             btnSaveBook.Click += btnSaveBook_Click;
             // 
             // cbCategory
             // 
             cbCategory.BackColor = Color.Transparent;
-            cbCategory.BorderRadius = 5;
+            cbCategory.BorderRadius = 10;
             cbCategory.CustomizableEdges = customizableEdges5;
             cbCategory.DrawMode = DrawMode.OwnerDrawFixed;
             cbCategory.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -217,12 +221,12 @@
             cbCategory.Name = "cbCategory";
             cbCategory.ShadowDecoration.CustomizableEdges = customizableEdges6;
             cbCategory.Size = new Size(317, 36);
-            cbCategory.TabIndex = 24;
+            cbCategory.TabIndex = 4;
             // 
             // btnCancelBook
             // 
             btnCancelBook.BorderColor = Color.Transparent;
-            btnCancelBook.BorderRadius = 5;
+            btnCancelBook.BorderRadius = 15;
             btnCancelBook.CustomizableEdges = customizableEdges7;
             btnCancelBook.DisabledState.BorderColor = Color.DarkGray;
             btnCancelBook.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -231,17 +235,17 @@
             btnCancelBook.FillColor = Color.MediumOrchid;
             btnCancelBook.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold);
             btnCancelBook.ForeColor = Color.White;
-            btnCancelBook.Location = new Point(698, 559);
+            btnCancelBook.Location = new Point(680, 546);
             btnCancelBook.Name = "btnCancelBook";
             btnCancelBook.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnCancelBook.Size = new Size(185, 49);
-            btnCancelBook.TabIndex = 25;
+            btnCancelBook.Size = new Size(259, 62);
+            btnCancelBook.TabIndex = 7;
             btnCancelBook.Text = "Cancel";
             btnCancelBook.Click += btnCancelBook_Click;
             // 
             // dtPublishDate
             // 
-            dtPublishDate.BorderRadius = 5;
+            dtPublishDate.BorderRadius = 10;
             dtPublishDate.Checked = true;
             dtPublishDate.CustomizableEdges = customizableEdges9;
             dtPublishDate.FillColor = Color.MediumOrchid;
@@ -254,7 +258,7 @@
             dtPublishDate.Name = "dtPublishDate";
             dtPublishDate.ShadowDecoration.CustomizableEdges = customizableEdges10;
             dtPublishDate.Size = new Size(313, 36);
-            dtPublishDate.TabIndex = 23;
+            dtPublishDate.TabIndex = 2;
             dtPublishDate.Value = new DateTime(2026, 6, 10, 18, 31, 22, 734);
             // 
             // llAddImage
@@ -274,7 +278,7 @@
             // 
             // tbAuthor
             // 
-            tbAuthor.BorderRadius = 5;
+            tbAuthor.BorderRadius = 10;
             tbAuthor.CustomizableEdges = customizableEdges11;
             tbAuthor.DefaultText = "";
             tbAuthor.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -291,11 +295,12 @@
             tbAuthor.SelectedText = "";
             tbAuthor.ShadowDecoration.CustomizableEdges = customizableEdges12;
             tbAuthor.Size = new Size(317, 31);
-            tbAuthor.TabIndex = 22;
+            tbAuthor.TabIndex = 5;
+            tbAuthor.Validating += tbAuthor_Validating;
             // 
             // tbTitle
             // 
-            tbTitle.BorderRadius = 5;
+            tbTitle.BorderRadius = 10;
             tbTitle.CustomizableEdges = customizableEdges13;
             tbTitle.DefaultText = "";
             tbTitle.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -312,11 +317,12 @@
             tbTitle.SelectedText = "";
             tbTitle.ShadowDecoration.CustomizableEdges = customizableEdges14;
             tbTitle.Size = new Size(317, 31);
-            tbTitle.TabIndex = 19;
+            tbTitle.TabIndex = 0;
+            tbTitle.Validating += tbTitle_Validating;
             // 
             // tbDetails
             // 
-            tbDetails.BorderRadius = 5;
+            tbDetails.BorderRadius = 10;
             tbDetails.CustomizableEdges = customizableEdges15;
             tbDetails.DefaultText = "";
             tbDetails.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -334,7 +340,8 @@
             tbDetails.SelectedText = "";
             tbDetails.ShadowDecoration.CustomizableEdges = customizableEdges16;
             tbDetails.Size = new Size(317, 98);
-            tbDetails.TabIndex = 21;
+            tbDetails.TabIndex = 3;
+            tbDetails.Validating += tbDetails_Validating;
             // 
             // guna2HtmlLabel2
             // 
@@ -348,7 +355,7 @@
             // 
             // tbISBN
             // 
-            tbISBN.BorderRadius = 5;
+            tbISBN.BorderRadius = 10;
             tbISBN.CustomizableEdges = customizableEdges17;
             tbISBN.DefaultText = "";
             tbISBN.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -365,7 +372,8 @@
             tbISBN.SelectedText = "";
             tbISBN.ShadowDecoration.CustomizableEdges = customizableEdges18;
             tbISBN.Size = new Size(317, 31);
-            tbISBN.TabIndex = 20;
+            tbISBN.TabIndex = 1;
+            tbISBN.Validating += tbISBN_Validating;
             // 
             // guna2HtmlLabel3
             // 
@@ -417,6 +425,11 @@
             guna2HtmlLabel6.TabIndex = 16;
             guna2HtmlLabel6.Text = " Category";
             // 
+            // epAddBook
+            // 
+            epAddBook.ContainerControl = this;
+            epAddBook.Icon = (Icon)resources.GetObject("epAddBook.Icon");
+            // 
             // frmAddNewBook
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -425,12 +438,14 @@
             Controls.Add(guna2Panel1);
             Controls.Add(lblAddNewBook);
             Controls.Add(guna2HtmlLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmAddNewBook";
             Text = "Add Book";
             Load += frmAddNewBook_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbBookimg).EndInit();
+            ((System.ComponentModel.ISupportInitialize)epAddBook).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -461,5 +476,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private ErrorProvider epAddBook;
     }
 }

@@ -39,6 +39,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBorrowings));
             lblBooksTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             tbSearchOpt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -86,7 +87,7 @@
             // 
             // tbSearchOpt
             // 
-            tbSearchOpt.BorderRadius = 5;
+            tbSearchOpt.BorderRadius = 15;
             tbSearchOpt.CustomizableEdges = customizableEdges1;
             tbSearchOpt.DefaultText = "";
             tbSearchOpt.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -119,7 +120,7 @@
             // cbSearchOpt
             // 
             cbSearchOpt.BackColor = Color.Transparent;
-            cbSearchOpt.BorderRadius = 5;
+            cbSearchOpt.BorderRadius = 15;
             cbSearchOpt.CustomizableEdges = customizableEdges3;
             cbSearchOpt.DrawMode = DrawMode.OwnerDrawFixed;
             cbSearchOpt.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -137,7 +138,7 @@
             // 
             // btnBorrowBook
             // 
-            btnBorrowBook.BorderRadius = 5;
+            btnBorrowBook.BorderRadius = 15;
             btnBorrowBook.CustomizableEdges = customizableEdges5;
             btnBorrowBook.DisabledState.BorderColor = Color.DarkGray;
             btnBorrowBook.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -146,10 +147,10 @@
             btnBorrowBook.FillColor = Color.MediumOrchid;
             btnBorrowBook.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold);
             btnBorrowBook.ForeColor = Color.White;
-            btnBorrowBook.Location = new Point(1107, 58);
+            btnBorrowBook.Location = new Point(1107, 51);
             btnBorrowBook.Name = "btnBorrowBook";
             btnBorrowBook.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnBorrowBook.Size = new Size(247, 46);
+            btnBorrowBook.Size = new Size(247, 53);
             btnBorrowBook.TabIndex = 12;
             btnBorrowBook.Text = "Borrow Book";
             btnBorrowBook.Click += btnBorrowBook_Click;
@@ -208,26 +209,26 @@
             cmsOptions.RenderStyle.ColorTable = null;
             cmsOptions.RenderStyle.RoundedEdges = true;
             cmsOptions.RenderStyle.SelectionArrowColor = Color.White;
-            cmsOptions.RenderStyle.SelectionBackColor = Color.DarkMagenta;
+            cmsOptions.RenderStyle.SelectionBackColor = Color.MediumOrchid;
             cmsOptions.RenderStyle.SelectionForeColor = Color.White;
             cmsOptions.RenderStyle.SeparatorColor = Color.Gainsboro;
             cmsOptions.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            cmsOptions.Size = new Size(215, 100);
+            cmsOptions.Size = new Size(134, 72);
             // 
             // cmsReturn
             // 
             cmsReturn.Image = Properties.Resources.icons8_return_24;
             cmsReturn.Name = "cmsReturn";
-            cmsReturn.Size = new Size(214, 34);
+            cmsReturn.Size = new Size(133, 34);
             cmsReturn.Text = "Return";
             cmsReturn.Click += cmsReturn_Click;
             // 
             // cmsDelete
             // 
             cmsDelete.BackColor = SystemColors.ButtonHighlight;
-            cmsDelete.Image = Properties.Resources.DeleteIcon;
+            cmsDelete.Image = Properties.Resources.icons8_close_302;
             cmsDelete.Name = "cmsDelete";
-            cmsDelete.Size = new Size(214, 34);
+            cmsDelete.Size = new Size(133, 34);
             cmsDelete.Text = "Delete";
             cmsDelete.Click += cmsDelete_Click;
             // 
@@ -238,6 +239,7 @@
             ClientSize = new Size(1419, 754);
             Controls.Add(guna2Panel1);
             Controls.Add(lblBooksTitle);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmBorrowings";
             Text = "Borrowings";
             Load += frmBorrowings_Load;

@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\themecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:themecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmfines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmfines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmborrowings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmborrowings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmborrowings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmborrowings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,64 +31,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ThemeColor.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\ThemeColor.cs",
-              "RelativeDocumentMoniker": "ThemeColor.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\ThemeColor.cs",
-              "RelativeToolTip": "ThemeColor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
+              "Title": "ValidationHelper.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\ValidationHelper.cs",
+              "RelativeDocumentMoniker": "ValidationHelper.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\ValidationHelper.cs",
+              "RelativeToolTip": "ValidationHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T22:16:32.426Z",
+              "WhenOpened": "2026-07-05T14:13:20.997Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmBorrowings.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmBorrowings.cs",
-              "RelativeDocumentMoniker": "frmBorrowings.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmBorrowings.cs",
-              "RelativeToolTip": "frmBorrowings.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T22:08:31.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmBorrowings.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmBorrowings.cs",
-              "RelativeDocumentMoniker": "frmBorrowings.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmBorrowings.cs [Design]",
-              "RelativeToolTip": "frmBorrowings.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T22:08:26.197Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmFines.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmFines.cs",
-              "RelativeDocumentMoniker": "frmFines.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmFines.cs [Design]",
-              "RelativeToolTip": "frmFines.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T22:07:07.454Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmMembers.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmMembers.cs",
-              "RelativeDocumentMoniker": "frmMembers.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmMembers.cs [Design]",
-              "RelativeToolTip": "frmMembers.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T22:05:23.164Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -37,6 +37,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMembers));
             label1 = new Label();
             dgvListMembers = new Guna.UI2.WinForms.Guna2DataGridView();
             cmsOptions = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
@@ -70,7 +71,7 @@
             dgvListMembers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.MediumOrchid;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = Color.DarkMagenta;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -81,7 +82,7 @@
             dgvListMembers.ContextMenuStrip = cmsOptions;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.Font = new Font("Cairo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
@@ -97,10 +98,10 @@
             dgvListMembers.TabIndex = 9;
             dgvListMembers.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvListMembers.ThemeStyle.HeaderStyle.BackColor = Color.MediumOrchid;
-            dgvListMembers.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F);
+            dgvListMembers.ThemeStyle.HeaderStyle.Font = new Font("Cairo", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvListMembers.ThemeStyle.HeaderStyle.Height = 30;
             dgvListMembers.ThemeStyle.ReadOnly = true;
-            dgvListMembers.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F);
+            dgvListMembers.ThemeStyle.RowsStyle.Font = new Font("Cairo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dgvListMembers.ThemeStyle.RowsStyle.Height = 29;
             // 
             // cmsOptions
@@ -115,32 +116,32 @@
             cmsOptions.RenderStyle.ColorTable = null;
             cmsOptions.RenderStyle.RoundedEdges = true;
             cmsOptions.RenderStyle.SelectionArrowColor = Color.White;
-            cmsOptions.RenderStyle.SelectionBackColor = Color.DarkMagenta;
+            cmsOptions.RenderStyle.SelectionBackColor = Color.MediumOrchid;
             cmsOptions.RenderStyle.SelectionForeColor = Color.White;
             cmsOptions.RenderStyle.SeparatorColor = Color.Gainsboro;
             cmsOptions.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            cmsOptions.Size = new Size(215, 100);
+            cmsOptions.Size = new Size(134, 72);
             // 
             // editToolStripMenuItem
             // 
-            editToolStripMenuItem.Image = Properties.Resources.EditIcon;
+            editToolStripMenuItem.Image = Properties.Resources.icons8_edit_501;
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(214, 34);
+            editToolStripMenuItem.Size = new Size(133, 34);
             editToolStripMenuItem.Text = " Edit";
             editToolStripMenuItem.Click += editToolStripMenuItem_Click;
             // 
             // deleteToolStripMenuItem
             // 
             deleteToolStripMenuItem.BackColor = SystemColors.ButtonHighlight;
-            deleteToolStripMenuItem.Image = Properties.Resources.DeleteIcon;
+            deleteToolStripMenuItem.Image = Properties.Resources.icons8_close_301;
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(214, 34);
+            deleteToolStripMenuItem.Size = new Size(133, 34);
             deleteToolStripMenuItem.Text = "Delete";
             deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
             // tbSearchMembers
             // 
-            tbSearchMembers.BorderRadius = 5;
+            tbSearchMembers.BorderRadius = 10;
             tbSearchMembers.CustomizableEdges = customizableEdges1;
             tbSearchMembers.DefaultText = "";
             tbSearchMembers.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -162,7 +163,7 @@
             // 
             // btnAddMember
             // 
-            btnAddMember.BorderRadius = 5;
+            btnAddMember.BorderRadius = 15;
             btnAddMember.CustomizableEdges = customizableEdges3;
             btnAddMember.DisabledState.BorderColor = Color.DarkGray;
             btnAddMember.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -171,12 +172,12 @@
             btnAddMember.FillColor = Color.MediumOrchid;
             btnAddMember.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold);
             btnAddMember.ForeColor = Color.White;
-            btnAddMember.Location = new Point(1035, 54);
+            btnAddMember.Location = new Point(981, 54);
             btnAddMember.Name = "btnAddMember";
             btnAddMember.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnAddMember.Size = new Size(168, 46);
+            btnAddMember.Size = new Size(222, 54);
             btnAddMember.TabIndex = 11;
-            btnAddMember.Text = " Add";
+            btnAddMember.Text = " Add Member";
             btnAddMember.Click += btnAddMember_Click;
             // 
             // guna2Panel1
@@ -201,6 +202,7 @@
             ClientSize = new Size(1305, 718);
             Controls.Add(guna2Panel1);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMembers";
             Text = "Members";
             Load += frmMembers_Load;

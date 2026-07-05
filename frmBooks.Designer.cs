@@ -37,6 +37,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBooks));
             dgvBooks = new Guna.UI2.WinForms.Guna2DataGridView();
             cmsProperties = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             editToolStripMenuItem = new ToolStripMenuItem();
@@ -103,27 +104,27 @@
             cmsProperties.RenderStyle.ColorTable = null;
             cmsProperties.RenderStyle.RoundedEdges = true;
             cmsProperties.RenderStyle.SelectionArrowColor = Color.White;
-            cmsProperties.RenderStyle.SelectionBackColor = Color.DarkMagenta;
+            cmsProperties.RenderStyle.SelectionBackColor = Color.MediumOrchid;
             cmsProperties.RenderStyle.SelectionForeColor = Color.White;
             cmsProperties.RenderStyle.SeparatorColor = Color.Gainsboro;
             cmsProperties.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            cmsProperties.Size = new Size(215, 100);
+            cmsProperties.Size = new Size(137, 72);
             // 
             // editToolStripMenuItem
             // 
             editToolStripMenuItem.BackColor = SystemColors.ButtonHighlight;
-            editToolStripMenuItem.Image = Properties.Resources.EditIcon;
+            editToolStripMenuItem.Image = Properties.Resources.icons8_edit_50;
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(214, 34);
+            editToolStripMenuItem.Size = new Size(136, 34);
             editToolStripMenuItem.Text = " Edit";
             editToolStripMenuItem.Click += editToolStripMenuItem_Click;
             // 
             // deleteToolStripMenuItem
             // 
             deleteToolStripMenuItem.BackColor = SystemColors.ButtonHighlight;
-            deleteToolStripMenuItem.Image = Properties.Resources.DeleteIcon;
+            deleteToolStripMenuItem.Image = Properties.Resources.icons8_close_30;
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(214, 34);
+            deleteToolStripMenuItem.Size = new Size(136, 34);
             deleteToolStripMenuItem.Text = " Delete";
             deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
@@ -141,7 +142,7 @@
             // 
             // btnAddBook
             // 
-            btnAddBook.BorderRadius = 5;
+            btnAddBook.BorderRadius = 15;
             btnAddBook.CustomizableEdges = customizableEdges1;
             btnAddBook.DisabledState.BorderColor = Color.DarkGray;
             btnAddBook.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -150,17 +151,17 @@
             btnAddBook.FillColor = Color.MediumOrchid;
             btnAddBook.Font = new Font("Cairo", 13.7999992F, FontStyle.Bold);
             btnAddBook.ForeColor = Color.White;
-            btnAddBook.Location = new Point(1028, 54);
+            btnAddBook.Location = new Point(975, 54);
             btnAddBook.Name = "btnAddBook";
             btnAddBook.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnAddBook.Size = new Size(168, 46);
-            btnAddBook.TabIndex = 11;
-            btnAddBook.Text = " Add";
+            btnAddBook.Size = new Size(221, 57);
+            btnAddBook.TabIndex = 2;
+            btnAddBook.Text = " Add Book";
             btnAddBook.Click += btnAddBook_Click;
             // 
             // tbSearchBar
             // 
-            tbSearchBar.BorderRadius = 5;
+            tbSearchBar.BorderRadius = 10;
             tbSearchBar.CustomizableEdges = customizableEdges3;
             tbSearchBar.DefaultText = "";
             tbSearchBar.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -177,7 +178,7 @@
             tbSearchBar.SelectedText = "";
             tbSearchBar.ShadowDecoration.CustomizableEdges = customizableEdges4;
             tbSearchBar.Size = new Size(542, 46);
-            tbSearchBar.TabIndex = 13;
+            tbSearchBar.TabIndex = 1;
             tbSearchBar.TextChanged += tbSearchBar_TextChanged;
             // 
             // guna2Panel1
@@ -203,6 +204,7 @@
             ClientSize = new Size(1282, 732);
             Controls.Add(guna2Panel1);
             Controls.Add(lblBooksTitle);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmBooks";
             Text = "Books";
             Load += frmBooks_Load;

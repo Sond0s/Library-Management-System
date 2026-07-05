@@ -48,6 +48,7 @@ namespace LibraryManagmentSystem
             //Default value => Add new Member.
             Form frm = new frmAddNewMember(-1);
             frm.ShowDialog();
+            _RefreshMembersList();
 
         }
 
@@ -57,22 +58,35 @@ namespace LibraryManagmentSystem
 
             Form frm = new frmAddNewMember(MemberID);
             frm.ShowDialog();
+            _RefreshMembersList();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int MemberID = (int)dgvListMembers.CurrentRow.Cells["MemberID"].Value;
+
+            //check if the member has borrowings history
+            if(BorrowingsBLL.HasBorrowings(MemberID))
+            {
+                MessageBox.Show("Can't Delete this member because of old borrowings history saved."
+                    , "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
             if (MessageBox.Show("Are You Sure you want to delete this Member ?", "Delete",
-             MessageBoxButtons.YesNo) == DialogResult.Yes)
+             MessageBoxButtons.YesNo , MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (MembersBLL.DeleteMember(MemberID))
                 {
-                    MessageBox.Show("Member Deleted Successfully.", "Succeded");
+                    MessageBox.Show("Member Deleted Successfully.", "Succeded" , MessageBoxButtons.OK
+                        , MessageBoxIcon.Information);
                     _RefreshMembersList();
                 }
                 else
                 {
-                    MessageBox.Show("Failed to Delete Member", "Failed", MessageBoxButtons.OK);
+                    MessageBox.Show("Failed to Delete Member", "Failed", MessageBoxButtons.OK , MessageBoxIcon.Error);
                 }
             }
         }

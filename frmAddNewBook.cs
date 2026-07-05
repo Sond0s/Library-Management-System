@@ -23,7 +23,6 @@ namespace LibraryManagmentSystem
         public frmAddNewBook(int BookID)
         {
             InitializeComponent();
-
             //I'll use the same form in the 2 Cases : 1- Add 2- Update
             //if BookCopyID = -1 => get the form use in the Add mode.
             //otherwise , the form use will be in Update Mode (Edit).
@@ -69,6 +68,7 @@ namespace LibraryManagmentSystem
         {
             //set the default value of the combo box to the first selection.
             LoadCategories();
+            llRemoveImg.Visible = pbBookimg.ImageLocation != null;
 
             //default value of the combo box.
             cbCategory.SelectedIndex = 0;
@@ -102,7 +102,7 @@ namespace LibraryManagmentSystem
                 pbBookimg.ImageLocation = Book.ImagePath;
             }
 
-            llRemoveImg.Visible = (Book.ImagePath != null); 
+            llRemoveImg.Visible = (Book.ImagePath != null);
 
             cbCategory.SelectedIndex = cbCategory.FindString(CategoriesBLL.FindCategoryByID(Book.CategoryID).CategoryName);
 
@@ -118,6 +118,13 @@ namespace LibraryManagmentSystem
 
         private void btnSaveBook_Click(object sender, EventArgs e)
         {
+            //check required fields before save.
+            if (!this.ValidateChildren())
+            {
+                MessageBox.Show("Please fix the highlighted fields before saving.", "Validation Error");
+                return;
+            }
+
             int CategoryID = CategoriesBLL.FindCategoryByName(cbCategory.Text).CategoryID;
 
             Book.Title = tbTitle.Text;
@@ -140,11 +147,13 @@ namespace LibraryManagmentSystem
             {
                 if (Book.Save())
                 {
-                    MessageBox.Show("Book Added Successfully.");
+                    MessageBox.Show("Book Added Successfully.", "Success" , MessageBoxButtons.OK 
+                        , MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Failed to add new book.");
+                    MessageBox.Show("Failed to add new book." , "Failed", MessageBoxButtons.OK
+                        , MessageBoxIcon.Error);
                 }
             }
 
@@ -152,11 +161,11 @@ namespace LibraryManagmentSystem
             {
                 if (Book.Save())
                 {
-                    MessageBox.Show("Book Updated Successfully.", "Updated", MessageBoxButtons.OK);
+                    MessageBox.Show("Book Updated Successfully.", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Failed to update the book.", "Failed", MessageBoxButtons.OK);
+                    MessageBox.Show("Failed to update the book.", "Failed", MessageBoxButtons.OK,MessageBoxIcon.Error);
 
                 }
             }
@@ -176,12 +185,39 @@ namespace LibraryManagmentSystem
             {
                 pbBookimg.ImageLocation = ofdBook.FileName;
             }
+            llRemoveImg.Visible = true;
         }
 
         private void llRemoveImg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            pbBookimg.Image = null;
             pbBookimg.ImageLocation = null;
+            pbBookimg.Visible = false;
             llRemoveImg.Visible = false;
+
+        }
+
+        //Title - ISBN - Details - Author => Required.
+        private void tbTitle_Validating(object sender, CancelEventArgs e)
+        {
+            ValidationHelper.ValidateFields(sender, e, epAddBook);
+        }
+
+        private void tbISBN_Validating(object sender, CancelEventArgs e)
+        {
+            ValidationHelper.ValidateFields(sender, e, epAddBook);
+        }
+
+        private void tbAuthor_Validating(object sender, CancelEventArgs e)
+        {
+            ValidationHelper.ValidateFields(sender, e, epAddBook);
+
+        }
+
+        private void tbDetails_Validating(object sender, CancelEventArgs e)
+        {
+            ValidationHelper.ValidateFields(sender, e, epAddBook);
+
         }
     }
 }

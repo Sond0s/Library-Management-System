@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\bll\\booksbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:bll\\booksbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\obj\\Debug\\net8.0-windows\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0-windows\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\dal\\obj\\debug\\net8.0\\dal.assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:dal\\obj\\debug\\net8.0\\dal.assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|c:\\users\\user\\source\\repos\\windowsforms\\librarymanagmentsystem\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6C0E8E8-B2A6-4B1A-932D-48330A41D8B8}|LibraryManagmentSystem.csproj|solutionrelative:validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,6 +51,68 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-07-17T18:13:08.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "frmDashboard.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\frmDashboard.cs",
+              "RelativeToolTip": "frmDashboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-17T18:05:15.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BooksBLL.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\BLL\\BooksBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BooksBLL.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\BLL\\BooksBLL.cs",
+              "RelativeToolTip": "BLL\\BooksBLL.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAAAG8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-17T18:05:02.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": ".NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\obj\\Debug\\net8.0-windows\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net8.0-windows\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\obj\\Debug\\net8.0-windows\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "RelativeToolTip": "obj\\Debug\\net8.0-windows\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-17T18:04:55.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DAL.AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\DAL\\obj\\Debug\\net8.0\\DAL.AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "DAL\\obj\\Debug\\net8.0\\DAL.AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\DAL\\obj\\Debug\\net8.0\\DAL.AssemblyInfo.cs",
+              "RelativeToolTip": "DAL\\obj\\Debug\\net8.0\\DAL.AssemblyInfo.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAewA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-17T18:04:54.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ValidationHelper.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\WindowsForms\\LibraryManagmentSystem\\ValidationHelper.cs",
               "RelativeDocumentMoniker": "ValidationHelper.cs",
@@ -38,8 +120,7 @@
               "RelativeToolTip": "ValidationHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T14:13:20.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T14:13:20.997Z"
             }
           ]
         }

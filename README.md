@@ -1,11 +1,11 @@
-# 📚Library Management System 
-A Windows form application to apply CRUD Operations to provide easy library management use with all 
+# 📚 Library Management System 
+A Windows Forms application to apply CRUD Operations to provide easy library management use with all 
 system components.
 
 Built with a strong focus on:
-1- Clean Architecture
-2- Usability and Flexibility
-3- Maintainability & Scalability.
+-  Clean Architecture
+-  Usability and Flexibility
+-  Mintainability & Scalability.
 
 
 ## 💻 Technologies:

@@ -1,4 +1,4 @@
-# Overview
+#📚 Library Management System 
 A Windows form application to apply CRUD Operations to provide easy library management use with all 
 system components.
 
@@ -7,40 +7,41 @@ Built with a strong focus on:
 2- Usability and Flexibility
 3- Maintainability & Scalability.
 
+<hr/> 
 
-# Technologies:
+##💻 Technologies:
 
 - C#
 - ADO.NET
 - SQL Server
 - 3-Tier Architecture
 
-# Features:
+##📝 Features:
 
-## Authentication
+### Authentication
 - User Login
 
-## Books Management
+### Books Management
 - View Books
 - Add Book
 - Update Book
 - Delete Book
 - Search Books
 
-## Members Management
+### Members Management
 - Add Member
 - Update Member
 - Delete Member
 
-## Borrowing Management 
+### Borrowing Management 
 - Borrow Books
 - Return Books
 - Fine Calculation
 
-## Members Fines 
+### Members Fines 
 Manage members' fines, payment recording, and preventing any new borrowing process until paying the last fine record.
 
-# Architecture
+## ✏Architecture
 
 Presentation Layer (WinForms)
 ↓
@@ -50,11 +51,11 @@ Data Access Layer (DAL)
 ↓
 SQL Server Database
 
-# Database Design 
+## 🖼Database Design 
 <img width="1806" height="712" alt="image" src="https://github.com/user-attachments/assets/1a5792ff-7ee5-4217-96c7-7ba59f47ccfe" />
 
 
-# Screenshots 
+##📸 Screenshots 
 ### Login Form 
 <img width="1354" height="735" alt="image" src="https://github.com/user-attachments/assets/6c3cd3f3-353e-47d6-b225-42b69109a7c7" />
 
@@ -65,7 +66,7 @@ SQL Server Database
 <img width="1221" height="776" alt="image" src="https://github.com/user-attachments/assets/3d2a46ad-9486-478e-80f8-6d6c36bc51a7" />
 
 
-# Author 
+##👧 Author 
 Sondos Khalid Khalifa 
 - Github: https://github.com/Sond0s
 
